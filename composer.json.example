@@ -1,0 +1,24 @@
+{
+    "name": "mycompany/mysite",
+    "description": "Source for example.com",
+    "homepage": "https://example.com",
+    "type": "project",
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+        }
+    ],
+    "require": {
+    	"wpackagist-theme/twentytwenty": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "plugins/{$name}/": ["type:wordpress-plugin"],
+            "themes/{$name}/": ["type:wordpress-theme"],
+        }
+    }
+}

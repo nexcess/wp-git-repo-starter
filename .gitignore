@@ -1,0 +1,38 @@
+# This file determines what files/directories git should ignore.
+#
+# Reference: https://git-scm.com/docs/gitignore
+
+# Default directories to ignore.
+cache/*
+mu-plugins/*
+plugins/*
+themes/*
+uploads/*
+upgrade/*
+vendor/*
+
+# For plugins or themes you wish to track, you may explicitly add them with a leading "!".
+#
+# Note that these should come *after* the default directories listed above!
+!mu-plugins/index.php
+!plugins/index.php
+!themes/index.php
+!uploads/index.php
+#!plugins/my-feature-plugin
+#!themes/my-theme
+
+# Drop-in files that are typically provided by plugins.
+advanced-cache.php
+object-cache.php
+sunrise.php
+
+# Log files, database dumps, and archives.
+*.gz
+*.log
+*.sql
+*.tgz
+*.zip
+
+# System files.
+.DS_Store
+Trashes.db
